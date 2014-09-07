@@ -1,0 +1,36 @@
+<html>
+    <head>
+    </head>
+    <body>
+        <canvas style="border: 1px solid blue" width="1000" height="600" id="duk"></canvas>
+        
+        <script>
+            // Deklarera och tilldelar variabler för canvas.
+            var c = document.getElementById("duk");
+            var ctx = c.getContext("2d");
+            
+            // Måla rektanglar på canvas
+            ctx.fillStyle = "rgba(0, 255, 255, 0.3)";
+            ctx.fillRect(10, 10, 100, 20);
+            ctx.fillStyle = "rgb(0,0,0)";
+            ctx.fillRect(900, 10, 10, 100);
+            ctx.fillRect(900, 500, 100, 100);
+            ctx.fillRect(10, 550, 20, 20);
+            
+            // Måla ett streck.
+            ctx.lineWidth = 10;
+            ctx.strokeStyle = "rgb(255, 100, 0)";
+            ctx.beginPath();
+            ctx.moveTo(0,0);
+            ctx.lineTo(1000,300);
+            ctx.stroke();
+            
+            // Måla en cirkel
+            ctx.beginPath();
+            ctx.arc(500, 300, 200, 0, 2 * Math.PI);
+            ctx.strokeStyle = "rgba(255, 0, 0, 0.5)";
+            ctx.stroke();
+            ctx.fill();
+        </script>
+    </body>
+</html>
